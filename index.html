@@ -400,7 +400,7 @@ footer{
 .simulator-frame .feasibility.warn .fdot{background:#e08020}
 .simulator-frame .feasibility.no .fdot{background:#e03030}
 
-.simulator-frame .kpi-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:14px}
+.simulator-frame .kpi-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:14px}
 .simulator-frame .kpi{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 10px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .simulator-frame .kpi-l{font-size:10px;color:var(--muted);margin-bottom:5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;line-height:1.3}
 .simulator-frame .kpi-v{font-size:16px;font-weight:700;line-height:1.1;color:var(--text);font-family:'IBM Plex Mono',monospace}
@@ -1306,7 +1306,6 @@ function compute(){
   const whDay=cur.whDay;
 
   const whPerSunH   = cur.psh>0        ? whDay/cur.psh        : 0;
-  const whPerClarteH= cur.daylightH>0  ? whDay/cur.daylightH  : 0;
 
   const whWeek=whDay*7;
   const battWh=(capMah/1000)*volt;
@@ -1354,7 +1353,6 @@ function compute(){
 
   document.getElementById('kpi-grid').innerHTML=[
     [u.kpiWhPerSun,     fmtWh(whPerSunH),    `÷ ${cur.psh.toFixed(1)}${u.perSunSuffix}`],
-    [u.kpiWhPerClarte,  fmtWh(whPerClarteH), `÷ ${cur.daylightH.toFixed(1)}${u.perClarteSuffix}`],
     [u.kpiDailyProd,    fmtWh(whDay),        u.whPerDay],
     [u.kpiPeakPower,    peakMw.toFixed(2),   'mW'],
     [u.kpiFullCharge,   chargeH>9999?'>9999h':chargeH<1?(chargeH*60).toFixed(0)+'min':chargeH.toFixed(1)+'h', u.at100],
@@ -1373,7 +1371,6 @@ function compute(){
   // ── Balance table ────────────────────────────────────────────────────────
   document.getElementById('compare-list').innerHTML=[
     {l:'/'+u.perSunH,    gen:whPerSunH,   conso:consoWhH},
-    {l:'/'+u.perClarteH, gen:whPerClarteH,conso:consoWhH},
     {l:'/'+(L==='fr'?'jour':'day'), gen:whDay, conso:consoWhDay},
   ].map(p=>{
     const cov=p.conso>0?Math.min(999,(p.gen/p.conso)*100):100;
