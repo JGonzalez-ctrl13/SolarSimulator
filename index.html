@@ -17,23 +17,23 @@
 html{scroll-behavior:smooth}
 
 :root{
-  /* ---- Dark site palette (distinct from the simulator's light palette) ---- */
-  --bg-0:#11100D;        /* base — warm near-black, not pure tech-black */
-  --bg-1:#171511;        /* section alt */
-  --bg-2:#1D1A15;        /* card */
-  --bg-3:#262218;        /* card hover / raised */
-  --hairline:rgba(247,240,224,0.09);
-  --hairline-strong:rgba(247,240,224,0.16);
+  /* ---- Dark site palette — aligned to optipus-vivatech charte ---- */
+  --bg-0:#0a0a0f;        /* base — cool near-black (vivatech ink) */
+  --bg-1:#101017;        /* section alt */
+  --bg-2:#16161d;        /* card (vivatech ink-soft) */
+  --bg-3:#20202a;        /* card hover / raised */
+  --hairline:rgba(250,250,247,0.09);
+  --hairline-strong:rgba(250,250,247,0.16);
 
-  --ink-0:#F3EFE4;       /* primary text, warm off-white */
-  --ink-1:#C9C2B2;       /* secondary text */
-  --ink-2:#8B8576;       /* muted / caption */
+  --ink-0:#fafaf7;       /* primary text, cool off-white (vivatech canvas) */
+  --ink-1:#c4c4cf;       /* secondary text */
+  --ink-2:#9a9aa6;       /* muted / caption (vivatech ink-faint) */
 
-  --salmon:#F0A467;
-  --salmon-dim:rgba(240,164,103,0.14);
-  --sand:#F4EFC9;
-  --sky:#AED4EC;
-  --violet:#B6A1D4;
+  --salmon:#ff8b7a;      /* vivatech brand-salmon (primary accent) */
+  --salmon-dim:rgba(255,139,122,0.14);
+  --sand:#ffb86b;        /* vivatech brand-amber */
+  --sky:#4da9ff;         /* vivatech brand-blue */
+  --violet:#6b5bff;      /* vivatech brand-violet */
 
   --radius-l:28px;
   --radius-m:18px;
@@ -55,7 +55,7 @@ body{
   overflow-x:hidden;
 }
 
-::selection{background:var(--salmon);color:#1a1208}
+::selection{background:var(--salmon);color:#0a0a0f}
 
 a{color:inherit;text-decoration:none}
 
@@ -106,7 +106,7 @@ a{color:inherit;text-decoration:none}
   transition:background .2s, color .2s;
   border:none; background:none;
 }
-.lang-btn.active{background:var(--salmon); color:#1a1208}
+.lang-btn.active{background:var(--salmon); color:#0a0a0f}
 .lang-btn:not(.active):hover{color:var(--ink-0)}
 .nav-right{display:flex; align-items:center}
 @media (max-width:480px){
@@ -133,7 +133,7 @@ a{color:inherit;text-decoration:none}
 .hero-glow{
   position:absolute; top:-220px; right:-160px;
   width:680px; height:680px; border-radius:50%;
-  background:radial-gradient(circle, rgba(240,164,103,0.16), transparent 70%);
+  background:radial-gradient(circle, rgba(255,139,122,0.16), transparent 70%);
   pointer-events:none;
 }
 .hero-eyebrow{
@@ -176,7 +176,7 @@ a{color:inherit;text-decoration:none}
   transition:transform .2s, background .2s, border-color .2s;
   cursor:pointer; border:1px solid transparent;
 }
-.btn-primary{background:var(--salmon); color:#1a1208}
+.btn-primary{background:var(--salmon); color:#0a0a0f}
 .btn-primary:hover{transform:translateY(-2px); background:#f5b27c}
 .btn-ghost{border-color:var(--hairline-strong); color:var(--ink-0)}
 .btn-ghost:hover{background:var(--bg-3); transform:translateY(-2px)}
@@ -259,7 +259,7 @@ section{position:relative}
 =================================================================== */
 .sim-shell{
   border-radius:var(--radius-l);
-  background:linear-gradient(165deg, rgba(247,240,224,0.04), rgba(247,240,224,0.01));
+  background:linear-gradient(165deg, rgba(250,250,247,0.04), rgba(250,250,247,0.01));
   border:1px solid var(--hairline);
   padding:6px;
 }
@@ -315,19 +315,19 @@ footer{
   *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important}
 }
 :root{
-  /* Optipus PV LIGHT palette (CMJN chart) */
-  --opv-purple:#C5B3D8;   --opv-purple-dk:#7a62a8;   --opv-purple-lt:rgba(197,179,216,.2);
-  --opv-yellow:#F9F4B6;   --opv-yellow-dk:#b8a500;   --opv-yellow-lt:rgba(249,244,182,.35);
-  --opv-salmon:#F7AF7A;   --opv-salmon-dk:#c97030;   --opv-salmon-lt:rgba(247,175,122,.18);
-  --opv-sky:#CBE5F9;      --opv-sky-dk:#4a8ab5;      --opv-sky-lt:rgba(203,229,249,.35);
-  --opv-black:#1F1F1F;    --opv-white:#FFFFFF;
+  /* Optipus PV LIGHT palette — aligned to optipus-vivatech charte */
+  --opv-purple:#6b5bff;   --opv-purple-dk:#4b3fd0;   --opv-purple-lt:rgba(107,91,255,.14);
+  --opv-yellow:#ffb86b;   --opv-yellow-dk:#b0761c;   --opv-yellow-lt:rgba(255,184,107,.20);
+  --opv-salmon:#ff8b7a;   --opv-salmon-dk:#d94f3d;   --opv-salmon-lt:rgba(255,139,122,.16);
+  --opv-sky:#4da9ff;      --opv-sky-dk:#1f7fd4;      --opv-sky-lt:rgba(77,169,255,.16);
+  --opv-black:#0a0a0f;    --opv-white:#FFFFFF;
 
-  --bg:#F5F4F0;
+  --bg:#f3f4f0;
   --card:#FFFFFF;
-  --border:rgba(0,0,0,0.08);
-  --border2:rgba(0,0,0,0.13);
-  --text:#1F1F1F;
-  --muted:#6a6860;
+  --border:rgba(10,10,15,0.08);
+  --border2:rgba(10,10,15,0.14);
+  --text:#0a0a0f;
+  --muted:#5a5a66;
   --r:10px;
 }
 
@@ -345,7 +345,7 @@ footer{
 .simulator-frame .htitle{font-size:12px;font-weight:500;color:var(--muted);margin-top:2px}
 .simulator-frame .hright{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:4px}
 .simulator-frame .badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--opv-black);color:#fff;letter-spacing:.06em}
-.simulator-frame .badge2{font-size:9px;font-weight:600;padding:2px 8px;border-radius:20px;background:var(--opv-purple-lt);color:var(--opv-purple-dk);border:1px solid rgba(122,98,168,.22)}
+.simulator-frame .badge2{font-size:9px;font-weight:600;padding:2px 8px;border-radius:20px;background:var(--opv-purple-lt);color:var(--opv-purple-dk);border:1px solid rgba(75,63,208,.28)}
 
 .simulator-frame .grid3{display:grid;grid-template-columns:1.35fr 1fr 0.85fr;gap:14px;margin-bottom:14px}
 .simulator-frame .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
@@ -358,6 +358,8 @@ footer{
 .simulator-frame .srow{display:flex;align-items:center;gap:10px}
 .simulator-frame .srow input[type=range]{flex:1;height:4px;accent-color:var(--opv-salmon-dk)}
 .simulator-frame .sval{font-size:12px;font-weight:600;min-width:52px;text-align:right;color:var(--text);font-family:'DM Mono',monospace}
+.simulator-frame .srow input[type=number]{flex:1;width:auto}
+.simulator-frame .srow select.unit-sel{width:auto;flex:0 0 auto;min-width:74px}
 .simulator-frame .divider{height:1px;background:var(--border);margin:12px 0}
 
 .simulator-frame .trow{display:flex;gap:5px;margin-bottom:10px}
@@ -365,21 +367,21 @@ footer{
 .simulator-frame .tog.active{background:var(--opv-salmon);color:var(--opv-black);border-color:var(--opv-salmon-dk);font-weight:600}
 .simulator-frame .tog small{display:block;font-size:10px;opacity:.75;margin-top:1px}
 
-.simulator-frame .factor-chain{background:var(--opv-yellow-lt);border:1px solid rgba(184,165,0,.25);border-radius:8px;padding:12px 14px;margin-bottom:10px}
+.simulator-frame .factor-chain{background:var(--opv-yellow-lt);border:1px solid rgba(255,184,107,.25);border-radius:8px;padding:12px 14px;margin-bottom:10px}
 .simulator-frame .fc-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--opv-yellow-dk);margin-bottom:9px;display:flex;align-items:center;justify-content:space-between}
 .simulator-frame .fc-link{font-size:10px;font-weight:500;color:var(--opv-sky-dk);text-decoration:none;letter-spacing:0;text-transform:none}
 .simulator-frame .fc-link:hover{text-decoration:underline}
 .simulator-frame .fc-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;gap:8px}
-.simulator-frame .fc-row:last-child{margin-bottom:0;padding-top:8px;border-top:1px solid rgba(184,165,0,.2)}
+.simulator-frame .fc-row:last-child{margin-bottom:0;padding-top:8px;border-top:1px solid rgba(255,184,107,.2)}
 .simulator-frame .fc-label{font-size:11px;color:var(--muted);flex:1}
-.simulator-frame .fc-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:rgba(184,165,0,.15);color:var(--opv-yellow-dk)}
+.simulator-frame .fc-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:rgba(255,184,107,.15);color:var(--opv-yellow-dk)}
 .simulator-frame .fc-val{font-size:12px;font-weight:600;color:var(--opv-yellow-dk);text-align:right;font-family:'DM Mono',monospace}
 .simulator-frame .fc-total{font-size:15px;font-weight:700;color:var(--opv-salmon-dk);font-family:'DM Mono',monospace}
 
 .simulator-frame .info-box{font-size:11px;color:var(--muted);padding:8px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border);line-height:1.55;margin-bottom:8px}
 
 /* daylight pill */
-.simulator-frame .dl-pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;padding:4px 11px;border-radius:20px;background:var(--opv-sky-lt);color:var(--opv-sky-dk);border:1px solid rgba(74,138,181,.22);margin-bottom:10px;font-family:'DM Mono',monospace}
+.simulator-frame .dl-pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;padding:4px 11px;border-radius:20px;background:var(--opv-sky-lt);color:var(--opv-sky-dk);border:1px solid rgba(31,127,212,.28);margin-bottom:10px;font-family:'DM Mono',monospace}
 
 .simulator-frame .orient-vis{display:flex;gap:5px;margin-bottom:10px}
 .simulator-frame .orient-btn{flex:1;padding:8px 4px;border:1px solid var(--border2);border-radius:7px;cursor:pointer;background:var(--bg);transition:all .15s;text-align:center;user-select:none}
@@ -451,69 +453,6 @@ footer{
   </div>
 </nav>
 
-<header class="hero">
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="container">
-    <div class="hero-eyebrow" data-i18n="heroEyebrow">Optipus PV · Organic Photovoltaics</div>
-    <h1 data-i18n-html="heroTitle">When energy<br>becomes <em>a material</em>.</h1>
-    <p class="hero-sub" data-i18n-html="heroSub">
-      <strong>Energyskin™</strong> turns passive surfaces into active sources
-      of renewable energy — flexible, colorable and recyclable.
-      Built on 15+ years of organic photovoltaics R&amp;D.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#simulateur" data-i18n="heroBtnPrimary">Try the simulator</a>
-      <a class="btn btn-ghost" href="#materiau" data-i18n="heroBtnGhost">Discover the material</a>
-    </div>
-  </div>
-
-  <div class="ribbon-wrap" aria-hidden="true">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path id="ribbonA" class="ribbon-path" stroke="#F0A467" stroke-opacity="0.55" d="M0,60 C150,10 300,110 450,60 C600,10 750,110 900,60 C1000,26 1100,26 1200,60"/>
-      <path id="ribbonB" class="ribbon-path" stroke="#AED4EC" stroke-opacity="0.4" d="M0,68 C150,18 300,118 450,68 C600,18 750,118 900,68 C1000,34 1100,34 1200,68"/>
-      <path id="ribbonC" class="ribbon-path" stroke="#B6A1D4" stroke-opacity="0.3" d="M0,52 C150,2 300,102 450,52 C600,2 750,102 900,52 C1000,18 1100,18 1200,52"/>
-    </svg>
-  </div>
-</header>
-
-<section id="materiau" class="section-pad section-pad--tight-top">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow" data-i18n="materialEyebrow">The material</div>
-        <h2 class="section-title" data-i18n-html="materialTitle">Optipus PV embeds organic photovoltaics <em>directly</em> into the surfaces around you.</h2>
-      </div>
-    </div>
-
-    <div class="material-grid">
-      <div class="material-cell">
-        <div class="material-swatch" style="background:var(--salmon)"></div>
-        <div class="material-num">01</div>
-        <h3 data-i18n="mat1Title">Flexible &amp; lightweight</h3>
-        <p data-i18n="mat1Body">Ultra-thin polymer film under 350 μm and 300 g/m² — laminates, bends, conforms to any shape.</p>
-      </div>
-      <div class="material-cell">
-        <div class="material-swatch" style="background:var(--sand)"></div>
-        <div class="material-num">02</div>
-        <h3 data-i18n="mat2Title">Freedom of design</h3>
-        <p data-i18n="mat2Body">Any color, any texture, any pattern. Energy becomes part of the surface, not an afterthought.</p>
-      </div>
-      <div class="material-cell">
-        <div class="material-swatch" style="background:var(--sky)"></div>
-        <div class="material-num">03</div>
-        <h3 data-i18n="mat3Title">Process-compatible</h3>
-        <p data-i18n="mat3Body">Integrates with the plastics, composites and technical textiles you already manufacture.</p>
-      </div>
-      <div class="material-cell">
-        <div class="material-swatch" style="background:var(--violet)"></div>
-        <div class="material-num">04</div>
-        <h3 data-i18n="mat4Title">Direct &amp; diffuse light</h3>
-        <p data-i18n="mat4Body">Harvests indoors and outdoors. From 2 klux of office light to 120 klux of full sun.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="simulateur" class="section-pad">
   <div class="container">
     <div class="section-head">
@@ -571,6 +510,12 @@ footer{
       <option value="nyc">New York, USA</option>
       <option value="la">Los Angeles, USA</option>
       <option value="sydney">Sydney, Australia</option>
+      <option value="mumbai">Mumbai, India</option>
+      <option value="seoul">Seoul, South Korea</option>
+      <option value="capetown">Cape Town, South Africa</option>
+      <option value="saopaulo">São Paulo, Brazil</option>
+      <option value="buenosaires">Buenos Aires, Argentina</option>
+      <option value="mexicocity">Mexico City, Mexico</option>
     </select>
   </div>
   <div class="field">
@@ -616,8 +561,8 @@ footer{
 <div class="card">
   <div class="slabel" id="sim-module-surface">Module &amp; Surface</div>
   <div class="field">
-    <label id="sim-surface-label">Available surface (cm²)</label>
-    <div class="srow"><input type="range" id="surface" min="5" max="1000" step="5" value="80"><span class="sval" id="surface-out">80 cm²</span></div>
+    <label id="sim-surface-label">Available surface</label>
+    <div class="srow"><input type="number" id="surface" min="0" step="any" value="80"><select id="surface-unit" class="unit-sel"><option value="cm2">cm²</option><option value="m2">m²</option></select></div>
   </div>
   <div class="field">
     <label id="sim-eff-label">Nominal OPV efficiency (%)</label>
@@ -626,16 +571,16 @@ footer{
   <div class="divider"></div>
   <div class="slabel" id="sim-battery-device">Battery &amp; Device</div>
   <div class="field">
-    <label id="sim-cap-label">Battery capacity (mAh)</label>
-    <div class="srow"><input type="range" id="cap" min="100" max="10000" step="100" value="2500"><span class="sval" id="cap-out">2500 mAh</span></div>
+    <label id="sim-cap-label">Battery capacity</label>
+    <div class="srow"><input type="number" id="cap" min="0" step="any" value="2500"><select id="cap-unit" class="unit-sel"><option value="mAh">mAh</option><option value="Ah">Ah</option><option value="kAh">kAh</option></select></div>
   </div>
   <div class="field">
     <label id="sim-volt-label">Voltage (V)</label>
     <input type="number" id="volt" min="0.5" max="48" step="0.1" value="3.7" placeholder="3.7">
   </div>
   <div class="field">
-    <label id="sim-conso-label">Device consumption (mW)</label>
-    <div class="srow"><input type="range" id="conso" min="1" max="500" step="1" value="50"><span class="sval" id="conso-out">50 mW</span></div>
+    <label id="sim-conso-label">Device consumption</label>
+    <div class="srow"><input type="number" id="conso" min="0" step="any" value="50"><select id="conso-unit" class="unit-sel"><option value="mW">mW</option><option value="W">W</option><option value="kW">kW</option></select></div>
   </div>
 </div>
 
@@ -654,44 +599,44 @@ footer{
   <div class="orient-vis">
     <div class="orient-btn active" id="orient-horiz" onclick="setOrient('horiz')">
       <svg width="36" height="28" viewBox="0 0 36 28">
-        <rect x="4" y="16" width="28" height="5" rx="1.5" fill="#F7AF7A"/>
-        <line x1="18" y1="6" x2="10" y2="14" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="18" y1="6" x2="18" y2="14" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="18" y1="6" x2="26" y2="14" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <circle cx="18" cy="5" r="3" fill="#F9F4B6" stroke="#b8a500" stroke-width="1"/>
+        <rect x="4" y="16" width="28" height="5" rx="1.5" fill="#ff8b7a"/>
+        <line x1="18" y1="6" x2="10" y2="14" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="18" y1="6" x2="18" y2="14" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="18" y1="6" x2="26" y2="14" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <circle cx="18" cy="5" r="3" fill="#ffd08a" stroke="#b0761c" stroke-width="1"/>
       </svg>
       <div class="orient-label">Horizontal</div>
       <div class="orient-factor" id="of-horiz">×1.00</div>
     </div>
     <div class="orient-btn" id="orient-tilt30" onclick="setOrient('tilt30')">
       <svg width="36" height="28" viewBox="0 0 36 28">
-        <rect x="5" y="10" width="28" height="5" rx="1.5" fill="#CBE5F9" transform="rotate(-30 19 12.5)"/>
-        <line x1="18" y1="4" x2="10" y2="10" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="18" y1="4" x2="18" y2="12" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="18" y1="4" x2="26" y2="10" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <circle cx="18" cy="3" r="3" fill="#F9F4B6" stroke="#b8a500" stroke-width="1"/>
+        <rect x="5" y="10" width="28" height="5" rx="1.5" fill="#7cc0ff" transform="rotate(-30 19 12.5)"/>
+        <line x1="18" y1="4" x2="10" y2="10" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="18" y1="4" x2="18" y2="12" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="18" y1="4" x2="26" y2="10" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <circle cx="18" cy="3" r="3" fill="#ffd08a" stroke="#b0761c" stroke-width="1"/>
       </svg>
       <div class="orient-label">Tilted 30°</div>
       <div class="orient-factor" id="of-tilt30">×1.10</div>
     </div>
     <div class="orient-btn" id="orient-vert" onclick="setOrient('vert')">
       <svg width="36" height="28" viewBox="0 0 36 28">
-        <rect x="15" y="5" width="5" height="20" rx="1.5" fill="#CBE5F9"/>
-        <line x1="6" y1="14" x2="12" y2="10" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="6" y1="14" x2="12" y2="14" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="6" y1="14" x2="12" y2="18" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <circle cx="5" cy="14" r="3" fill="#F9F4B6" stroke="#b8a500" stroke-width="1"/>
+        <rect x="15" y="5" width="5" height="20" rx="1.5" fill="#7cc0ff"/>
+        <line x1="6" y1="14" x2="12" y2="10" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="6" y1="14" x2="12" y2="14" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="6" y1="14" x2="12" y2="18" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <circle cx="5" cy="14" r="3" fill="#ffd08a" stroke="#b0761c" stroke-width="1"/>
       </svg>
       <div class="orient-label">Vertical</div>
       <div class="orient-factor" id="of-vert">×0.65</div>
     </div>
     <div class="orient-btn" id="orient-curved" onclick="setOrient('curved')">
       <svg width="36" height="28" viewBox="0 0 36 28">
-        <path d="M6 20 Q18 8 30 20" stroke="#F7AF7A" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <line x1="10" y1="4" x2="12" y2="12" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="18" y1="4" x2="18" y2="10" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="26" y1="4" x2="24" y2="12" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <circle cx="18" cy="3" r="3" fill="#F9F4B6" stroke="#b8a500" stroke-width="1"/>
+        <path d="M6 20 Q18 8 30 20" stroke="#ff8b7a" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <line x1="10" y1="4" x2="12" y2="12" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="18" y1="4" x2="18" y2="10" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="26" y1="4" x2="24" y2="12" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <circle cx="18" cy="3" r="3" fill="#ffd08a" stroke="#b0761c" stroke-width="1"/>
       </svg>
       <div class="orient-label">Curved</div>
       <div class="orient-factor" id="of-curved">×0.82</div>
@@ -746,7 +691,7 @@ footer{
     </div>
 
     <div class="sim-note">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#8B8576" stroke-width="1.2"/><path d="M8 7v4M8 5v.5" stroke="#8B8576" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#9a9aa6" stroke-width="1.2"/><path d="M8 7v4M8 5v.5" stroke="#9a9aa6" stroke-width="1.2" stroke-linecap="round"/></svg>
       <span data-i18n="simNote">Indicative estimates for illustration purposes — based on PVGIS-SARAH2 climate averages (2005–2020) and module PCE assumptions.</span>
     </div>
   </div>
@@ -898,7 +843,13 @@ const PVGIS={
   tokyo:     {lat:35.69,lon:139.69,ghi:[1990,2490,3230,3850,4180,3760,4150,4880,3640,3020,2270,1940],pr:[.804,.806,.808,.808,.805,.800,.794,.797,.806,.808,.806,.804],diff:[.54,.54,.55,.56,.58,.62,.60,.52,.56,.52,.50,.50],daylight:[10.3,11.2,12.3,13.4,14.4,15.0,14.7,13.7,12.5,11.3,10.3,9.8]},
   nyc:       {lat:40.71,lon:-74.01,ghi:[1700,2310,3360,4350,5190,5770,5820,5280,4210,2980,1810,1430],pr:[.804,.806,.808,.808,.804,.799,.794,.797,.806,.808,.806,.804],diff:[.55,.51,.48,.46,.45,.42,.40,.41,.45,.49,.56,.58],daylight:[9.5,10.9,12.3,13.8,15.1,15.7,15.4,14.3,12.7,11.1,9.7,9.1]},
   la:        {lat:34.05,lon:-118.24,ghi:[2780,3570,4760,5670,6100,6380,6380,5980,5000,3870,2920,2450],pr:[.805,.806,.808,.808,.804,.799,.793,.797,.806,.808,.806,.804],diff:[.38,.37,.36,.34,.33,.28,.26,.28,.30,.34,.38,.40],daylight:[10.4,11.4,12.5,13.7,14.7,15.2,14.9,14.0,12.8,11.5,10.5,10.0]},
-  sydney:    {lat:-33.87,lon:151.21,ghi:[6100,5440,4370,3070,2050,1610,1780,2510,3660,4880,5690,6230],pr:[.795,.797,.802,.806,.808,.808,.807,.807,.806,.803,.798,.794],diff:[.40,.42,.47,.54,.60,.64,.62,.57,.50,.44,.40,.38],daylight:[14.5,13.5,12.3,11.0,9.9,9.3,9.6,10.5,11.8,13.1,14.1,14.7]}
+  sydney:    {lat:-33.87,lon:151.21,ghi:[6100,5440,4370,3070,2050,1610,1780,2510,3660,4880,5690,6230],pr:[.795,.797,.802,.806,.808,.808,.807,.807,.806,.803,.798,.794],diff:[.40,.42,.47,.54,.60,.64,.62,.57,.50,.44,.40,.38],daylight:[14.5,13.5,12.3,11.0,9.9,9.3,9.6,10.5,11.8,13.1,14.1,14.7]},
+  mumbai:     {lat:19.076,lon:72.877, ghi:[5222,5977,6717,7121,6905,4727,3567,3877,4440,5160,5027,4794],pr:[.803,.801,.796,.795,.798,.807,.810,.809,.806,.801,.800,.803],diff:[.26,.25,.26,.27,.31,.50,.62,.58,.48,.35,.30,.29],daylight:[11.0,11.4,11.9,12.4,12.9,13.1,13.0,12.6,12.1,11.5,11.1,10.9]},
+  seoul:      {lat:37.567,lon:126.978, ghi:[2713,3662,4796,5377,5954,5798,4383,4481,4241,3697,2573,2318],pr:[.829,.830,.826,.819,.810,.804,.801,.800,.805,.812,.817,.824],diff:[.31,.29,.33,.38,.40,.43,.55,.49,.43,.37,.37,.34],daylight:[9.7,10.6,11.8,13.0,14.1,14.6,14.3,13.4,12.2,11.0,9.9,9.4]},
+  capetown:   {lat:-33.925,lon:18.424, ghi:[8254,7357,5871,4293,2947,2473,2732,3525,4884,6555,7678,8335],pr:[.809,.810,.812,.814,.814,.813,.815,.819,.819,.816,.813,.810],diff:[.26,.28,.30,.33,.34,.35,.33,.33,.35,.30,.29,.27],daylight:[14.0,13.3,12.2,11.1,10.2,9.8,10.0,10.8,11.8,12.9,13.8,14.3]},
+  saopaulo:   {lat:-23.55,lon:-46.633, ghi:[5384,5546,4852,4269,3498,3153,3445,4123,4699,5068,5359,5644],pr:[.805,.804,.806,.808,.810,.810,.809,.809,.807,.806,.807,.805],diff:[.47,.43,.44,.42,.38,.38,.36,.39,.42,.45,.47,.46],daylight:[13.3,12.8,12.1,11.4,10.8,10.6,10.7,11.2,11.9,12.6,13.2,13.4]},
+  buenosaires:{lat:-34.603,lon:-58.382, ghi:[7277,6302,5088,3834,2711,2298,2412,3383,4463,5666,7042,7647],pr:[.804,.806,.809,.812,.811,.811,.813,.818,.817,.814,.810,.806],diff:[.34,.36,.37,.38,.37,.37,.38,.34,.39,.38,.34,.32],daylight:[14.1,13.3,12.2,11.1,10.2,9.7,9.9,10.7,11.8,12.9,13.9,14.3]},
+  mexicocity: {lat:19.433,lon:-99.133, ghi:[4963,5829,6578,6862,6533,5963,5662,5578,5059,5150,4922,4862],pr:[.812,.808,.806,.805,.805,.808,.810,.810,.811,.812,.811,.810],diff:[.29,.27,.27,.29,.34,.39,.41,.40,.42,.35,.31,.24],daylight:[11.0,11.3,11.9,12.4,12.9,13.2,13.1,12.6,12.1,11.5,11.0,10.8]}
 };
 
 /* ──────────────────────────────────────────────────────────────────────────
@@ -911,7 +862,9 @@ const SIM_I18N = {
       rome:'Rome, Italy', stockholm:'Stockholm, Sweden', amsterdam:'Amsterdam, Netherlands',
       lisbon:'Lisbon, Portugal', barcelona:'Barcelona, Spain', milan:'Milan, Italy', lyon:'Lyon, France',
       casablanca:'Casablanca, Morocco', dubai:'Dubai, UAE', tokyo:'Tokyo, Japan', nyc:'New York, USA',
-      la:'Los Angeles, USA', sydney:'Sydney, Australia'
+      la:'Los Angeles, USA', sydney:'Sydney, Australia',
+      mumbai:'Mumbai, India', seoul:'Seoul, South Korea', capetown:'Cape Town, South Africa',
+      saopaulo:'São Paulo, Brazil', buenosaires:'Buenos Aires, Argentina', mexicocity:'Mexico City, Mexico'
     },
     months:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
     monthsFull:['January','February','March','April','May','June','July','August','September','October','November','December'],
@@ -945,12 +898,12 @@ const SIM_I18N = {
       totalLabel:'Total effective real factor',
       infoPvgis:'<strong>PVGIS-SARAH2</strong> — 2005–2020 averages (16 years). <strong>Climate PR</strong> = thermal + spectral + low-irradiance losses, computed by PVGIS per month and location.',
       moduleSurface:'Module & Surface',
-      surfaceLabel:'Available surface (cm²)',
+      surfaceLabel:'Available surface',
       effLabel:'Nominal OPV efficiency (%)',
       batteryDevice:'Battery & Device',
-      capLabel:'Battery capacity (mAh)',
+      capLabel:'Battery capacity',
       voltLabel:'Voltage (V)',
-      consoLabel:'Device consumption (mW)',
+      consoLabel:'Device consumption',
       environment:'Environment',
       geometrySurface:'Surface Geometry',
       orientSubtitle:'Orientation of the PV surface relative to the sun',
@@ -1007,7 +960,9 @@ const SIM_I18N = {
       rome:'Rome, Italy', stockholm:'Stockholm, Sweden', amsterdam:'Amsterdam, Netherlands',
       lisbon:'Lisbon, Portugal', barcelona:'Barcelona, Spain', milan:'Milan, Italy', lyon:'Lyon, France',
       casablanca:'Casablanca, Morocco', dubai:'Dubai, UAE', tokyo:'Tokyo, Japan', nyc:'New York, USA',
-      la:'Los Angeles, USA', sydney:'Sydney, Australia'
+      la:'Los Angeles, USA', sydney:'Sydney, Australia',
+      mumbai:'Mumbai, Inde', seoul:'Séoul, Corée du Sud', capetown:'Le Cap, Afrique du Sud',
+      saopaulo:'São Paulo, Brésil', buenosaires:'Buenos Aires, Argentine', mexicocity:'Mexico, Mexique'
     },
     months:['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'],
     monthsFull:['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
@@ -1041,12 +996,12 @@ const SIM_I18N = {
       totalLabel:'Facteur réel effectif total',
       infoPvgis:'<strong>PVGIS-SARAH2</strong> — moyennes 2005–2020 (16 ans). <strong>PR Climatique</strong> = pertes thermiques + spectrales + basse irradiance, calculé par PVGIS par mois et localisation.',
       moduleSurface:'Module & Surface',
-      surfaceLabel:'Surface disponible (cm²)',
+      surfaceLabel:'Surface disponible',
       effLabel:'Efficacité nominale OPV (%)',
       batteryDevice:'Batterie & Dispositif',
-      capLabel:'Capacité batterie (mAh)',
+      capLabel:'Capacité batterie',
       voltLabel:'Tension (V)',
-      consoLabel:'Consommation dispositif (mW)',
+      consoLabel:'Consommation dispositif',
       environment:'Environnement',
       geometrySurface:'Géométrie Surface',
       orientSubtitle:'Orientation de la surface PV par rapport au soleil',
@@ -1208,11 +1163,8 @@ function renderStaticSimText(){
     `<option value="${i}"${String(i)===currentMonth?' selected':''}>${name}</option>`
   ).join('');
 
-  // Slider unit suffixes (re-render current values)
-  document.getElementById('surface-out').textContent = document.getElementById('surface').value + ' cm²';
+  // Efficiency still uses a range slider — refresh its live value label
   document.getElementById('eff-out').textContent = document.getElementById('eff').value + '%';
-  document.getElementById('cap-out').textContent = document.getElementById('cap').value + ' mAh';
-  document.getElementById('conso-out').textContent = document.getElementById('conso').value + ' mW';
 }
 
 function setEnv(v){
@@ -1229,6 +1181,13 @@ function setOrient(v){
   compute();
 }
 
+// Unit conversion → base units the formula expects (cm² / mAh / mW)
+const SURF_TO_CM2 = {cm2:1, m2:10000};
+const CAP_TO_MAH  = {mAh:1, Ah:1000, kAh:1000000};
+const CONSO_TO_MW = {mW:1, W:1000, kW:1000000};
+const BASE_UNIT = {surface:'cm2', cap:'mAh', conso:'mW'};
+function unitOf(id){ const e=document.getElementById(id+'-unit'); return e?e.value:BASE_UNIT[id]; }
+
 function compute(){
   const L = getSimLang();
   const t = SIM_I18N[L];
@@ -1236,11 +1195,11 @@ function compute(){
 
   const city=document.getElementById('city').value;
   const mi=parseInt(document.getElementById('month').value);
-  const surfCm2=parseFloat(document.getElementById('surface').value);
+  const surfCm2=(parseFloat(document.getElementById('surface').value)||0)*SURF_TO_CM2[unitOf('surface')];
   const eff=parseFloat(document.getElementById('eff').value)/100;
-  const capMah=parseFloat(document.getElementById('cap').value);
+  const capMah=(parseFloat(document.getElementById('cap').value)||0)*CAP_TO_MAH[unitOf('cap')];
   const volt=parseFloat(document.getElementById('volt').value)||3.7;
-  const consoMw=parseFloat(document.getElementById('conso').value);
+  const consoMw=(parseFloat(document.getElementById('conso').value)||0)*CONSO_TO_MW[unitOf('conso')];
 
   const cd=PVGIS[city];
   const ec=ENV[env];
@@ -1367,9 +1326,9 @@ function compute(){
     data:{labels:t.months,datasets:[{
       label:u.chartLabel,
       data:whDayArr.map(v=>parseFloat(v.toFixed(6))),
-      backgroundColor:t.months.map((_,i)=>i===mi?'#CBE5F9':'#F7AF7A'),
+      backgroundColor:t.months.map((_,i)=>i===mi?'#7cc0ff':'#ff8b7a'),
       borderWidth:t.months.map((_,i)=>i===mi?2:0),
-      borderColor:'#4a8ab5',
+      borderColor:'#1f7fd4',
       borderRadius:4,borderSkipped:false
     }]},
     options:{responsive:true,maintainAspectRatio:false,
@@ -1387,9 +1346,13 @@ function initSimulator(){
   ['city','month'].forEach(id=>document.getElementById(id).addEventListener('change',compute));
   document.getElementById('volt').addEventListener('input',compute);
   document.getElementById('volt').addEventListener('change',compute);
-  [['surface','surface-out',v=>v+' cm²'],['eff','eff-out',v=>v+'%'],['cap','cap-out',v=>v+' mAh'],['conso','conso-out',v=>v+' mW']
-  ].forEach(([id,outId,fmt])=>{
-    document.getElementById(id).addEventListener('input',()=>{document.getElementById(outId).textContent=fmt(document.getElementById(id).value);compute();});
+  // Efficiency slider keeps its live value label
+  document.getElementById('eff').addEventListener('input',()=>{document.getElementById('eff-out').textContent=document.getElementById('eff').value+'%';compute();});
+  // Free numeric fields + their unit selectors
+  ['surface','cap','conso'].forEach(id=>{
+    document.getElementById(id).addEventListener('input',compute);
+    document.getElementById(id).addEventListener('change',compute);
+    document.getElementById(id+'-unit').addEventListener('change',compute);
   });
   setOrient('horiz');
   compute();
