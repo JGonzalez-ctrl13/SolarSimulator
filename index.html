@@ -7,7 +7,7 @@
 <meta name="description" content="When energy becomes a material. Energyskin™ turns passive surfaces into active sources of renewable energy — flexible, colorable and recyclable.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,300;9..144,440;9..144,600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
 /* ===================================================================
@@ -17,32 +17,32 @@
 html{scroll-behavior:smooth}
 
 :root{
-  /* ---- Dark site palette — aligned to optipus-vivatech charte ---- */
-  --bg-0:#0a0a0f;        /* base — cool near-black (vivatech ink) */
-  --bg-1:#101017;        /* section alt */
-  --bg-2:#16161d;        /* card (vivatech ink-soft) */
-  --bg-3:#20202a;        /* card hover / raised */
-  --hairline:rgba(250,250,247,0.09);
-  --hairline-strong:rgba(250,250,247,0.16);
+  /* ---- Dark site palette — Optipus PV charte ---- */
+  --bg-0:#11100D;        /* base — warm near-black, not pure tech-black */
+  --bg-1:#171511;        /* section alt */
+  --bg-2:#1D1A15;        /* card */
+  --bg-3:#262218;        /* card hover / raised */
+  --hairline:rgba(247,240,224,0.09);
+  --hairline-strong:rgba(247,240,224,0.16);
 
-  --ink-0:#fafaf7;       /* primary text, cool off-white (vivatech canvas) */
-  --ink-1:#c4c4cf;       /* secondary text */
-  --ink-2:#9a9aa6;       /* muted / caption (vivatech ink-faint) */
+  --ink-0:#F3EFE4;       /* primary text, warm off-white */
+  --ink-1:#C9C2B2;       /* secondary text */
+  --ink-2:#8B8576;       /* muted / caption */
 
-  --salmon:#ff8b7a;      /* vivatech brand-salmon (primary accent) */
-  --salmon-dim:rgba(255,139,122,0.14);
-  --sand:#ffb86b;        /* vivatech brand-amber */
-  --sky:#4da9ff;         /* vivatech brand-blue */
-  --violet:#6b5bff;      /* vivatech brand-violet */
+  --salmon:#F0A467;
+  --salmon-dim:rgba(240,164,103,0.14);
+  --sand:#F4EFC9;
+  --sky:#AED4EC;
+  --violet:#B6A1D4;
 
   --radius-l:28px;
   --radius-m:18px;
   --radius-s:10px;
 
   --container:1180px;
-  --display:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
-  --body:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
-  --mono:'IBM Plex Mono', ui-monospace, monospace;
+  --display:'Fraunces', Georgia, serif;
+  --body:'DM Sans', system-ui, -apple-system, sans-serif;
+  --mono:'DM Mono', ui-monospace, monospace;
 }
 
 body{
@@ -55,7 +55,7 @@ body{
   overflow-x:hidden;
 }
 
-::selection{background:var(--salmon);color:#0a0a0f}
+::selection{background:var(--salmon);color:#1a1208}
 
 a{color:inherit;text-decoration:none}
 
@@ -106,7 +106,7 @@ a{color:inherit;text-decoration:none}
   transition:background .2s, color .2s;
   border:none; background:none;
 }
-.lang-btn.active{background:var(--salmon); color:#0a0a0f}
+.lang-btn.active{background:var(--salmon); color:#1a1208}
 .lang-btn:not(.active):hover{color:var(--ink-0)}
 .nav-right{display:flex; align-items:center}
 @media (max-width:480px){
@@ -133,7 +133,7 @@ a{color:inherit;text-decoration:none}
 .hero-glow{
   position:absolute; top:-220px; right:-160px;
   width:680px; height:680px; border-radius:50%;
-  background:radial-gradient(circle, rgba(255,139,122,0.16), transparent 70%);
+  background:radial-gradient(circle, rgba(240,164,103,0.16), transparent 70%);
   pointer-events:none;
 }
 .hero-eyebrow{
@@ -176,7 +176,7 @@ a{color:inherit;text-decoration:none}
   transition:transform .2s, background .2s, border-color .2s;
   cursor:pointer; border:1px solid transparent;
 }
-.btn-primary{background:var(--salmon); color:#0a0a0f}
+.btn-primary{background:var(--salmon); color:#1a1208}
 .btn-primary:hover{transform:translateY(-2px); background:#f5b27c}
 .btn-ghost{border-color:var(--hairline-strong); color:var(--ink-0)}
 .btn-ghost:hover{background:var(--bg-3); transform:translateY(-2px)}
@@ -259,7 +259,7 @@ section{position:relative}
 =================================================================== */
 .sim-shell{
   border-radius:var(--radius-l);
-  background:linear-gradient(165deg, rgba(250,250,247,0.04), rgba(250,250,247,0.01));
+  background:linear-gradient(165deg, rgba(247,240,224,0.04), rgba(247,240,224,0.01));
   border:1px solid var(--hairline);
   padding:6px;
 }
@@ -315,26 +315,26 @@ footer{
   *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important}
 }
 :root{
-  /* Optipus PV LIGHT palette — aligned to optipus-vivatech charte */
-  --opv-purple:#6b5bff;   --opv-purple-dk:#4b3fd0;   --opv-purple-lt:rgba(107,91,255,.14);
-  --opv-yellow:#ffb86b;   --opv-yellow-dk:#b0761c;   --opv-yellow-lt:rgba(255,184,107,.20);
-  --opv-salmon:#ff8b7a;   --opv-salmon-dk:#d94f3d;   --opv-salmon-lt:rgba(255,139,122,.16);
-  --opv-sky:#4da9ff;      --opv-sky-dk:#1f7fd4;      --opv-sky-lt:rgba(77,169,255,.16);
-  --opv-black:#0a0a0f;    --opv-white:#FFFFFF;
+  /* Optipus PV LIGHT palette (CMJN chart) */
+  --opv-purple:#C5B3D8;   --opv-purple-dk:#7a62a8;   --opv-purple-lt:rgba(197,179,216,.2);
+  --opv-yellow:#F9F4B6;   --opv-yellow-dk:#b8a500;   --opv-yellow-lt:rgba(249,244,182,.35);
+  --opv-salmon:#F7AF7A;   --opv-salmon-dk:#c97030;   --opv-salmon-lt:rgba(247,175,122,.18);
+  --opv-sky:#CBE5F9;      --opv-sky-dk:#4a8ab5;      --opv-sky-lt:rgba(203,229,249,.35);
+  --opv-black:#1F1F1F;    --opv-white:#FFFFFF;
 
-  --bg:#f3f4f0;
+  --bg:#F5F4F0;
   --card:#FFFFFF;
-  --border:rgba(10,10,15,0.08);
-  --border2:rgba(10,10,15,0.14);
-  --text:#0a0a0f;
-  --muted:#5a5a66;
+  --border:rgba(0,0,0,0.08);
+  --border2:rgba(0,0,0,0.13);
+  --text:#1F1F1F;
+  --muted:#6a6860;
   --r:10px;
 }
 
 .simulator-frame *{box-sizing:border-box;margin:0;padding:0}
 
 
-.simulator-frame{font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:14px;color:var(--text);background:var(--bg);padding:28px 24px;border-radius:20px}
+.simulator-frame{font-family:'DM Sans',system-ui,sans-serif;font-size:14px;color:var(--text);background:var(--bg);padding:28px 24px;border-radius:20px}
 .simulator-frame .wrap{max-width:980px;margin:0 auto}
 
 .simulator-frame .header{display:flex;align-items:center;gap:14px;margin-bottom:22px;padding-bottom:16px;border-bottom:1.5px solid var(--border2)}
@@ -345,7 +345,7 @@ footer{
 .simulator-frame .htitle{font-size:12px;font-weight:500;color:var(--muted);margin-top:2px}
 .simulator-frame .hright{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:4px}
 .simulator-frame .badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--opv-black);color:#fff;letter-spacing:.06em}
-.simulator-frame .badge2{font-size:9px;font-weight:600;padding:2px 8px;border-radius:20px;background:var(--opv-purple-lt);color:var(--opv-purple-dk);border:1px solid rgba(75,63,208,.28)}
+.simulator-frame .badge2{font-size:9px;font-weight:600;padding:2px 8px;border-radius:20px;background:var(--opv-purple-lt);color:var(--opv-purple-dk);border:1px solid rgba(122,98,168,.22)}
 
 .simulator-frame .grid3{display:grid;grid-template-columns:1.35fr 1fr 0.85fr;gap:14px;margin-bottom:14px}
 .simulator-frame .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
@@ -357,7 +357,7 @@ footer{
 .simulator-frame select:focus, .simulator-frame input:focus{border-color:var(--opv-salmon-dk);outline:none}
 .simulator-frame .srow{display:flex;align-items:center;gap:10px}
 .simulator-frame .srow input[type=range]{flex:1;height:4px;accent-color:var(--opv-salmon-dk)}
-.simulator-frame .sval{font-size:12px;font-weight:600;min-width:52px;text-align:right;color:var(--text);font-family:'IBM Plex Mono',monospace}
+.simulator-frame .sval{font-size:12px;font-weight:600;min-width:52px;text-align:right;color:var(--text);font-family:'DM Mono',monospace}
 .simulator-frame .srow input[type=number]{flex:1;width:auto}
 .simulator-frame .srow select.unit-sel{width:auto;flex:0 0 auto;min-width:74px}
 .simulator-frame .divider{height:1px;background:var(--border);margin:12px 0}
@@ -367,28 +367,28 @@ footer{
 .simulator-frame .tog.active{background:var(--opv-salmon);color:var(--opv-black);border-color:var(--opv-salmon-dk);font-weight:600}
 .simulator-frame .tog small{display:block;font-size:10px;opacity:.75;margin-top:1px}
 
-.simulator-frame .factor-chain{background:var(--opv-yellow-lt);border:1px solid rgba(255,184,107,.25);border-radius:8px;padding:12px 14px;margin-bottom:10px}
+.simulator-frame .factor-chain{background:var(--opv-yellow-lt);border:1px solid rgba(184,165,0,.25);border-radius:8px;padding:12px 14px;margin-bottom:10px}
 .simulator-frame .fc-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--opv-yellow-dk);margin-bottom:9px;display:flex;align-items:center;justify-content:space-between}
 .simulator-frame .fc-link{font-size:10px;font-weight:500;color:var(--opv-sky-dk);text-decoration:none;letter-spacing:0;text-transform:none}
 .simulator-frame .fc-link:hover{text-decoration:underline}
 .simulator-frame .fc-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;gap:8px}
-.simulator-frame .fc-row:last-child{margin-bottom:0;padding-top:8px;border-top:1px solid rgba(255,184,107,.2)}
+.simulator-frame .fc-row:last-child{margin-bottom:0;padding-top:8px;border-top:1px solid rgba(184,165,0,.2)}
 .simulator-frame .fc-label{font-size:11px;color:var(--muted);flex:1}
-.simulator-frame .fc-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:rgba(255,184,107,.15);color:var(--opv-yellow-dk)}
-.simulator-frame .fc-val{font-size:12px;font-weight:600;color:var(--opv-yellow-dk);text-align:right;font-family:'IBM Plex Mono',monospace}
-.simulator-frame .fc-total{font-size:15px;font-weight:700;color:var(--opv-salmon-dk);font-family:'IBM Plex Mono',monospace}
+.simulator-frame .fc-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:rgba(184,165,0,.15);color:var(--opv-yellow-dk)}
+.simulator-frame .fc-val{font-size:12px;font-weight:600;color:var(--opv-yellow-dk);text-align:right;font-family:'DM Mono',monospace}
+.simulator-frame .fc-total{font-size:15px;font-weight:700;color:var(--opv-salmon-dk);font-family:'DM Mono',monospace}
 
 .simulator-frame .info-box{font-size:11px;color:var(--muted);padding:8px 10px;background:var(--bg);border-radius:6px;border:1px solid var(--border);line-height:1.55;margin-bottom:8px}
 
 /* daylight pill */
-.simulator-frame .dl-pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;padding:4px 11px;border-radius:20px;background:var(--opv-sky-lt);color:var(--opv-sky-dk);border:1px solid rgba(31,127,212,.28);margin-bottom:10px;font-family:'IBM Plex Mono',monospace}
+.simulator-frame .dl-pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;padding:4px 11px;border-radius:20px;background:var(--opv-sky-lt);color:var(--opv-sky-dk);border:1px solid rgba(74,138,181,.22);margin-bottom:10px;font-family:'DM Mono',monospace}
 
 .simulator-frame .orient-vis{display:flex;gap:5px;margin-bottom:10px}
 .simulator-frame .orient-btn{flex:1;padding:8px 4px;border:1px solid var(--border2);border-radius:7px;cursor:pointer;background:var(--bg);transition:all .15s;text-align:center;user-select:none}
 .simulator-frame .orient-btn.active{border-color:var(--opv-sky-dk);background:var(--opv-sky-lt)}
 .simulator-frame .orient-btn svg{display:block;margin:0 auto 3px}
 .simulator-frame .orient-label{font-size:11px;font-weight:500;color:var(--muted)}
-.simulator-frame .orient-factor{font-size:10px;color:var(--opv-sky-dk);font-weight:700;margin-top:1px;font-family:'IBM Plex Mono',monospace}
+.simulator-frame .orient-factor{font-size:10px;color:var(--opv-sky-dk);font-weight:700;margin-top:1px;font-family:'DM Mono',monospace}
 .simulator-frame .orient-btn.active .orient-label{color:var(--opv-sky-dk)}
 
 .simulator-frame .feasibility{display:flex;align-items:center;gap:12px;padding:11px 16px;border-radius:8px;font-size:13px;font-weight:500;margin-bottom:14px;border:1px solid transparent}
@@ -403,7 +403,7 @@ footer{
 .simulator-frame .kpi-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:14px}
 .simulator-frame .kpi{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 10px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .simulator-frame .kpi-l{font-size:10px;color:var(--muted);margin-bottom:5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;line-height:1.3}
-.simulator-frame .kpi-v{font-size:16px;font-weight:700;line-height:1.1;color:var(--text);font-family:'IBM Plex Mono',monospace}
+.simulator-frame .kpi-v{font-size:16px;font-weight:700;line-height:1.1;color:var(--text);font-family:'DM Mono',monospace}
 .simulator-frame .kpi-u{font-size:10px;color:var(--muted);margin-top:2px}
 
 .simulator-frame .row2{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin-bottom:14px}
@@ -412,8 +412,8 @@ footer{
 .simulator-frame .crow{display:flex;align-items:center;gap:4px;padding:6px 0;border-bottom:1px solid var(--border);font-size:12px}
 .simulator-frame .crow:last-child{border-bottom:none}
 .simulator-frame .clabel{flex:1;color:var(--muted)}
-.simulator-frame .cgen{font-weight:600;color:var(--opv-salmon-dk);min-width:72px;text-align:right;font-family:'IBM Plex Mono',monospace}
-.simulator-frame .cconso{font-weight:500;min-width:72px;text-align:right;font-family:'IBM Plex Mono',monospace}
+.simulator-frame .cgen{font-weight:600;color:var(--opv-salmon-dk);min-width:72px;text-align:right;font-family:'DM Mono',monospace}
+.simulator-frame .cconso{font-weight:500;min-width:72px;text-align:right;font-family:'DM Mono',monospace}
 .simulator-frame .ccov{min-width:44px;text-align:right;font-size:11px;padding:2px 6px;border-radius:4px;font-weight:700}
 .simulator-frame .bar-row{margin-bottom:8px}
 .simulator-frame .bar-label{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:3px}
@@ -471,9 +471,9 @@ footer{
 
   <div class="ribbon-wrap" aria-hidden="true">
     <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path id="ribbonA" class="ribbon-path" stroke="#ff8b7a" stroke-opacity="0.55" d="M0,60 C150,10 300,110 450,60 C600,10 750,110 900,60 C1000,26 1100,26 1200,60"/>
-      <path id="ribbonB" class="ribbon-path" stroke="#4da9ff" stroke-opacity="0.4" d="M0,68 C150,18 300,118 450,68 C600,18 750,118 900,68 C1000,34 1100,34 1200,68"/>
-      <path id="ribbonC" class="ribbon-path" stroke="#6b5bff" stroke-opacity="0.3" d="M0,52 C150,2 300,102 450,52 C600,2 750,102 900,52 C1000,18 1100,18 1200,52"/>
+      <path id="ribbonA" class="ribbon-path" stroke="#F7AF7A" stroke-opacity="0.55" d="M0,60 C150,10 300,110 450,60 C600,10 750,110 900,60 C1000,26 1100,26 1200,60"/>
+      <path id="ribbonB" class="ribbon-path" stroke="#AED4EC" stroke-opacity="0.4" d="M0,68 C150,18 300,118 450,68 C600,18 750,118 900,68 C1000,34 1100,34 1200,68"/>
+      <path id="ribbonC" class="ribbon-path" stroke="#B6A1D4" stroke-opacity="0.3" d="M0,52 C150,2 300,102 450,52 C600,2 750,102 900,52 C1000,18 1100,18 1200,52"/>
     </svg>
   </div>
 </header>
@@ -579,6 +579,12 @@ footer{
       <option value="saopaulo">São Paulo, Brazil</option>
       <option value="buenosaires">Buenos Aires, Argentina</option>
       <option value="mexicocity">Mexico City, Mexico</option>
+      <option value="khartoum">Khartoum, Sudan</option>
+      <option value="kinshasa">Kinshasa, DR Congo</option>
+      <option value="abeche">Abéché, Chad</option>
+      <option value="kampala">Kampala, Uganda</option>
+      <option value="sanaa">Sanaa, Yemen</option>
+      <option value="caracas">Caracas, Venezuela</option>
     </select>
   </div>
   <div class="field">
@@ -662,44 +668,44 @@ footer{
   <div class="orient-vis">
     <div class="orient-btn active" id="orient-horiz" onclick="setOrient('horiz')">
       <svg width="36" height="28" viewBox="0 0 36 28">
-        <rect x="4" y="16" width="28" height="5" rx="1.5" fill="#ff8b7a"/>
-        <line x1="18" y1="6" x2="10" y2="14" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="18" y1="6" x2="18" y2="14" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="18" y1="6" x2="26" y2="14" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <circle cx="18" cy="5" r="3" fill="#ffd08a" stroke="#b0761c" stroke-width="1"/>
+        <rect x="4" y="16" width="28" height="5" rx="1.5" fill="#F7AF7A"/>
+        <line x1="18" y1="6" x2="10" y2="14" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="18" y1="6" x2="18" y2="14" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="18" y1="6" x2="26" y2="14" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <circle cx="18" cy="5" r="3" fill="#F9F4B6" stroke="#b8a500" stroke-width="1"/>
       </svg>
       <div class="orient-label">Horizontal</div>
       <div class="orient-factor" id="of-horiz">×1.00</div>
     </div>
     <div class="orient-btn" id="orient-tilt30" onclick="setOrient('tilt30')">
       <svg width="36" height="28" viewBox="0 0 36 28">
-        <rect x="5" y="10" width="28" height="5" rx="1.5" fill="#7cc0ff" transform="rotate(-30 19 12.5)"/>
-        <line x1="18" y1="4" x2="10" y2="10" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="18" y1="4" x2="18" y2="12" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="18" y1="4" x2="26" y2="10" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <circle cx="18" cy="3" r="3" fill="#ffd08a" stroke="#b0761c" stroke-width="1"/>
+        <rect x="5" y="10" width="28" height="5" rx="1.5" fill="#CBE5F9" transform="rotate(-30 19 12.5)"/>
+        <line x1="18" y1="4" x2="10" y2="10" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="18" y1="4" x2="18" y2="12" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="18" y1="4" x2="26" y2="10" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <circle cx="18" cy="3" r="3" fill="#F9F4B6" stroke="#b8a500" stroke-width="1"/>
       </svg>
       <div class="orient-label">Tilted 30°</div>
       <div class="orient-factor" id="of-tilt30">×1.10</div>
     </div>
     <div class="orient-btn" id="orient-vert" onclick="setOrient('vert')">
       <svg width="36" height="28" viewBox="0 0 36 28">
-        <rect x="15" y="5" width="5" height="20" rx="1.5" fill="#7cc0ff"/>
-        <line x1="6" y1="14" x2="12" y2="10" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="6" y1="14" x2="12" y2="14" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="6" y1="14" x2="12" y2="18" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <circle cx="5" cy="14" r="3" fill="#ffd08a" stroke="#b0761c" stroke-width="1"/>
+        <rect x="15" y="5" width="5" height="20" rx="1.5" fill="#CBE5F9"/>
+        <line x1="6" y1="14" x2="12" y2="10" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="6" y1="14" x2="12" y2="14" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="6" y1="14" x2="12" y2="18" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <circle cx="5" cy="14" r="3" fill="#F9F4B6" stroke="#b8a500" stroke-width="1"/>
       </svg>
       <div class="orient-label">Vertical</div>
       <div class="orient-factor" id="of-vert">×0.65</div>
     </div>
     <div class="orient-btn" id="orient-curved" onclick="setOrient('curved')">
       <svg width="36" height="28" viewBox="0 0 36 28">
-        <path d="M6 20 Q18 8 30 20" stroke="#ff8b7a" stroke-width="4" fill="none" stroke-linecap="round"/>
-        <line x1="10" y1="4" x2="12" y2="12" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="18" y1="4" x2="18" y2="10" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <line x1="26" y1="4" x2="24" y2="12" stroke="#a99cff" stroke-width="1.5" stroke-dasharray="2,2"/>
-        <circle cx="18" cy="3" r="3" fill="#ffd08a" stroke="#b0761c" stroke-width="1"/>
+        <path d="M6 20 Q18 8 30 20" stroke="#F7AF7A" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <line x1="10" y1="4" x2="12" y2="12" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="18" y1="4" x2="18" y2="10" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="26" y1="4" x2="24" y2="12" stroke="#C5B3D8" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <circle cx="18" cy="3" r="3" fill="#F9F4B6" stroke="#b8a500" stroke-width="1"/>
       </svg>
       <div class="orient-label">Curved</div>
       <div class="orient-factor" id="of-curved">×0.82</div>
@@ -754,7 +760,7 @@ footer{
     </div>
 
     <div class="sim-note">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#9a9aa6" stroke-width="1.2"/><path d="M8 7v4M8 5v.5" stroke="#9a9aa6" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#8B8576" stroke-width="1.2"/><path d="M8 7v4M8 5v.5" stroke="#8B8576" stroke-width="1.2" stroke-linecap="round"/></svg>
       <span data-i18n="simNote">Indicative estimates for illustration purposes — based on PVGIS-SARAH2 climate averages (2005–2020) and module PCE assumptions.</span>
     </div>
   </div>
@@ -912,7 +918,13 @@ const PVGIS={
   capetown:   {lat:-33.925,lon:18.424, ghi:[8254,7357,5871,4293,2947,2473,2732,3525,4884,6555,7678,8335],pr:[.809,.810,.812,.814,.814,.813,.815,.819,.819,.816,.813,.810],diff:[.26,.28,.30,.33,.34,.35,.33,.33,.35,.30,.29,.27],daylight:[14.0,13.3,12.2,11.1,10.2,9.8,10.0,10.8,11.8,12.9,13.8,14.3]},
   saopaulo:   {lat:-23.55,lon:-46.633, ghi:[5384,5546,4852,4269,3498,3153,3445,4123,4699,5068,5359,5644],pr:[.805,.804,.806,.808,.810,.810,.809,.809,.807,.806,.807,.805],diff:[.47,.43,.44,.42,.38,.38,.36,.39,.42,.45,.47,.46],daylight:[13.3,12.8,12.1,11.4,10.8,10.6,10.7,11.2,11.9,12.6,13.2,13.4]},
   buenosaires:{lat:-34.603,lon:-58.382, ghi:[7277,6302,5088,3834,2711,2298,2412,3383,4463,5666,7042,7647],pr:[.804,.806,.809,.812,.811,.811,.813,.818,.817,.814,.810,.806],diff:[.34,.36,.37,.38,.37,.37,.38,.34,.39,.38,.34,.32],daylight:[14.1,13.3,12.2,11.1,10.2,9.7,9.9,10.7,11.8,12.9,13.9,14.3]},
-  mexicocity: {lat:19.433,lon:-99.133, ghi:[4963,5829,6578,6862,6533,5963,5662,5578,5059,5150,4922,4862],pr:[.812,.808,.806,.805,.805,.808,.810,.810,.811,.812,.811,.810],diff:[.29,.27,.27,.29,.34,.39,.41,.40,.42,.35,.31,.24],daylight:[11.0,11.3,11.9,12.4,12.9,13.2,13.1,12.6,12.1,11.5,11.0,10.8]}
+  mexicocity: {lat:19.433,lon:-99.133, ghi:[4963,5829,6578,6862,6533,5963,5662,5578,5059,5150,4922,4862],pr:[.812,.808,.806,.805,.805,.808,.810,.810,.811,.812,.811,.810],diff:[.29,.27,.27,.29,.34,.39,.41,.40,.42,.35,.31,.24],daylight:[11.0,11.3,11.9,12.4,12.9,13.2,13.1,12.6,12.1,11.5,11.0,10.8]},
+  khartoum:{lat:15.5007,lon:32.5599, ghi:[5815,6488,7211,7639,7405,6967,6396,6284,6384,6155,5967,5581],pr:[.808,.804,.798,.793,.791,.794,.799,.801,.795,.794,.802,.806],diff:[.24,.23,.23,.23,.26,.29,.34,.34,.31,.28,.23,.24],daylight:[11.2,11.5,11.9,12.4,12.7,12.9,12.8,12.5,12.1,11.6,11.3,11.1]},
+  kinshasa:{lat:-4.4419,lon:15.2663, ghi:[5084,5170,5345,4927,4575,4499,4724,4468,4763,5029,4983,4819],pr:[.799,.798,.798,.799,.800,.801,.802,.802,.801,.800,.799,.800],diff:[.45,.45,.42,.44,.43,.42,.40,.46,.46,.45,.45,.47],daylight:[12.2,12.1,12.0,11.9,11.8,11.7,11.8,11.9,12.0,12.1,12.2,12.3]},
+  abeche:  {lat:13.8292,lon:20.8324, ghi:[6050,6641,7214,7499,7152,6784,6091,5434,6260,6380,6191,5886],pr:[.800,.796,.793,.791,.791,.794,.799,.803,.797,.795,.797,.799],diff:[.23,.23,.24,.24,.28,.30,.36,.41,.32,.27,.22,.22],daylight:[11.3,11.5,11.9,12.3,12.6,12.8,12.7,12.5,12.1,11.7,11.3,11.2]},
+  kampala: {lat:0.3476,lon:32.5825, ghi:[5785,5946,5548,4691,4620,4830,5034,5190,5441,5214,4973,5239],pr:[.805,.805,.806,.807,.808,.808,.808,.808,.807,.808,.808,.808],diff:[.36,.36,.40,.47,.45,.41,.40,.41,.40,.42,.43,.40],daylight:[12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0,12.0]},
+  sanaa:   {lat:15.3694,lon:44.191, ghi:[5461,6063,6559,6611,6398,5996,5553,5566,6013,6256,5665,5370],pr:[.811,.803,.805,.805,.801,.802,.805,.809,.809,.811,.810,.812],diff:[.28,.27,.29,.32,.34,.37,.41,.40,.34,.27,.27,.26],daylight:[11.2,11.5,11.9,12.3,12.7,12.9,12.8,12.5,12.1,11.6,11.3,11.1]},
+  caracas: {lat:10.4806,lon:-66.9036, ghi:[5010,5511,5781,5453,5157,5113,5181,5338,5590,5223,4716,4732],pr:[.807,.806,.804,.803,.804,.806,.806,.805,.803,.804,.805,.807],diff:[.37,.36,.37,.41,.44,.43,.43,.42,.39,.39,.40,.38],daylight:[11.5,11.7,11.9,12.2,12.5,12.6,12.6,12.3,12.0,11.8,11.5,11.4]}
 };
 
 /* ──────────────────────────────────────────────────────────────────────────
@@ -927,7 +939,9 @@ const SIM_I18N = {
       casablanca:'Casablanca, Morocco', dubai:'Dubai, UAE', tokyo:'Tokyo, Japan', nyc:'New York, USA',
       la:'Los Angeles, USA', sydney:'Sydney, Australia',
       mumbai:'Mumbai, India', seoul:'Seoul, South Korea', capetown:'Cape Town, South Africa',
-      saopaulo:'São Paulo, Brazil', buenosaires:'Buenos Aires, Argentina', mexicocity:'Mexico City, Mexico'
+      saopaulo:'São Paulo, Brazil', buenosaires:'Buenos Aires, Argentina', mexicocity:'Mexico City, Mexico',
+      khartoum:'Khartoum, Sudan', kinshasa:'Kinshasa, DR Congo', abeche:'Abéché, Chad',
+      kampala:'Kampala, Uganda', sanaa:'Sanaa, Yemen', caracas:'Caracas, Venezuela'
     },
     months:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
     monthsFull:['January','February','March','April','May','June','July','August','September','October','November','December'],
@@ -1025,7 +1039,9 @@ const SIM_I18N = {
       casablanca:'Casablanca, Morocco', dubai:'Dubai, UAE', tokyo:'Tokyo, Japan', nyc:'New York, USA',
       la:'Los Angeles, USA', sydney:'Sydney, Australia',
       mumbai:'Mumbai, Inde', seoul:'Séoul, Corée du Sud', capetown:'Le Cap, Afrique du Sud',
-      saopaulo:'São Paulo, Brésil', buenosaires:'Buenos Aires, Argentine', mexicocity:'Mexico, Mexique'
+      saopaulo:'São Paulo, Brésil', buenosaires:'Buenos Aires, Argentine', mexicocity:'Mexico, Mexique',
+      khartoum:'Khartoum, Soudan', kinshasa:'Kinshasa, RD Congo', abeche:'Abéché, Tchad',
+      kampala:'Kampala, Ouganda', sanaa:'Sanaa, Yémen', caracas:'Caracas, Venezuela'
     },
     months:['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'],
     monthsFull:['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
@@ -1386,9 +1402,9 @@ function compute(){
     data:{labels:t.months,datasets:[{
       label:u.chartLabel,
       data:whDayArr.map(v=>parseFloat(v.toFixed(6))),
-      backgroundColor:t.months.map((_,i)=>i===mi?'#7cc0ff':'#ff8b7a'),
+      backgroundColor:t.months.map((_,i)=>i===mi?'#CBE5F9':'#F7AF7A'),
       borderWidth:t.months.map((_,i)=>i===mi?2:0),
-      borderColor:'#1f7fd4',
+      borderColor:'#4a8ab5',
       borderRadius:4,borderSkipped:false
     }]},
     options:{responsive:true,maintainAspectRatio:false,
