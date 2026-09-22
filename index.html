@@ -156,7 +156,9 @@ a{color:inherit;text-decoration:none}
   color:var(--ink-0);
 }
 .hero h1 em{
-  font-style:italic; font-weight:300; color:var(--salmon);
+  font-style:italic; font-weight:300;
+  background-image:linear-gradient(100deg, var(--salmon) 0%, var(--sand) 50%, var(--sky) 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
 }
 .hero-sub{
   margin-top:28px;
@@ -176,8 +178,8 @@ a{color:inherit;text-decoration:none}
   transition:transform .2s, background .2s, border-color .2s;
   cursor:pointer; border:1px solid transparent;
 }
-.btn-primary{background:var(--salmon); color:#1a1208}
-.btn-primary:hover{transform:translateY(-2px); background:#f5b27c}
+.btn-primary{background:var(--ink-0); color:var(--bg-0)}
+.btn-primary:hover{transform:translateY(-2px); background:#ffffff}
 .btn-ghost{border-color:var(--hairline-strong); color:var(--ink-0)}
 .btn-ghost:hover{background:var(--bg-3); transform:translateY(-2px)}
 
@@ -220,22 +222,31 @@ section{position:relative}
   max-width:680px;
   color:var(--ink-0);
 }
-.section-title em{font-style:italic; color:var(--salmon); font-weight:300}
+.section-title em{
+  font-style:italic; font-weight:300;
+  background-image:linear-gradient(100deg, var(--salmon) 0%, var(--sand) 50%, var(--sky) 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
 
 /* ===================================================================
    MATERIAL SECTION
 =================================================================== */
 .material-grid{
-  display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
-  background:var(--hairline);
-  border:1px solid var(--hairline);
-  border-radius:var(--radius-m);
-  overflow:hidden;
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:16px;
 }
 .material-cell{
   background:var(--bg-1);
-  padding:36px 30px;
+  border:1px solid var(--hairline);
+  border-radius:var(--radius-l);
+  padding:32px 28px;
   display:flex; flex-direction:column; gap:14px;
+  box-shadow:0 1px 2px rgba(0,0,0,.18);
+  transition:transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s ease, border-color .25s ease;
+}
+.material-cell:hover{
+  transform:translateY(-4px);
+  border-color:var(--hairline-strong);
+  box-shadow:0 24px 44px -18px rgba(0,0,0,.55);
 }
 .material-num{
   font-family:var(--mono); font-size:12px; color:var(--ink-2); letter-spacing:0.05em;
@@ -258,10 +269,23 @@ section{position:relative}
    SIMULATOR SECTION
 =================================================================== */
 .sim-shell{
+  position:relative;
+  z-index:0;
   border-radius:var(--radius-l);
   background:linear-gradient(165deg, rgba(247,240,224,0.04), rgba(247,240,224,0.01));
   border:1px solid var(--hairline);
   padding:6px;
+  box-shadow:0 30px 60px -24px rgba(0,0,0,.5);
+}
+.sim-shell::before{
+  content:'';
+  position:absolute; inset:-14px;
+  z-index:-1;
+  border-radius:calc(var(--radius-l) + 14px);
+  background:linear-gradient(135deg, rgba(240,164,103,.35), rgba(182,161,212,.3) 50%, rgba(174,212,236,.3));
+  filter:blur(28px);
+  opacity:.6;
+  pointer-events:none;
 }
 .sim-shell-inner{
   border-radius:calc(var(--radius-l) - 6px);
